@@ -1,0 +1,40 @@
+# Server configuration
+server:
+#  servlet:
+#    context-path: /accounts
+  port: 8085
+
+# Spring Boot configuration
+spring:
+#  profiles:
+#    active: development
+# Security configuration
+#  security:
+#    user:
+#      name: user
+#      password: user
+# Database
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://localhost:5432/account_db
+    username: root
+    password: pcikhjpiruzyigav
+# JPA properties
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    database: postgresql
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+    open-in-view: false
+    generate-ddl: true
+# File Upload properties
+  servlet:
+    multipart:
+      enabled: true
+      file-size-threshold: 2KB
+      max-file-size: 1MB
+
+file:
+  storage:
+    dir: /var/www/data/

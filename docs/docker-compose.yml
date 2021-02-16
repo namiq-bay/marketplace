@@ -1,0 +1,15 @@
+version: '3.1'
+
+services:
+  postgress_db:
+    image: postgres
+    ports:
+      - '5432:5432'
+    environment:
+      POSTGRES_USER: root
+      POSTGRES_PASSWORD: pcikhjpiruzyigav
+      POSTGRES_DB: account_db
+    volumes:
+      - pgdata:/var/lib/postgresql/marketplace/data
+volumes:
+  pgdata:
